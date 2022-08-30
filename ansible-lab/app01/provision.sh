@@ -1,0 +1,4 @@
+#/bin/sh
+cat << EOT >> /home/vagrant/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIsfLEmtdQoJS6Fh6un2GLYM0YCn3Jwu8wRoh0Y9ug+oEkTO3lYUc6skw6jU4LFTqXiwSXWpbhibU6OT5x17xb1QMFGJJi/8Z7Tx1ppYu0/q9ZMnVMq65LcPL8GaKY5oQT0YYGvoqbDNvr2XyDHgeo7Nilm0CNzMbSa2uhJ/bIov6zn7phNm/M2CwewSkBW83dV/Uc+7zliKGLGT4n6jtBglsZL8zbPjtuXgv8LQEaQ8d3enCNkUtnM+VPC40V4T97cqw3VnyE4WOEW0ZbE1kegyGsTKTUHclBEa8/ervZa7DzJJnuLyHgg3fhaV/Ezoqp7n9dtnH0R9szoO2Pky0d vagrant@control-node
+EOT
