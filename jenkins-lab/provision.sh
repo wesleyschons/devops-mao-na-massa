@@ -1,13 +1,14 @@
 #/bin/bash
-yum install epel-release -y
-yum install wget -y
+sudo yum install epel-release -y
+sudo yum install wget -y
 
-sudo wget --no-check-certificate -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo wget --no-check-certificate -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-yum install java-11-openjdk-devel -y
-yum install jenkins -y
-systemctl daemon-reload
-service jenkins start
+sudo yum install java-11-openjdk -y
+sudo yum install jenkins -y
+sudo systemctl daemon-reload
+sudo service jenkins start
 
 ###instalação do docker e docker compose
 sudo yum install -y yum-utils
