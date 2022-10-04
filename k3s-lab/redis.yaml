@@ -15,14 +15,24 @@ spec:
         app: redis
     spec:
       containers:
-        - name: redis-server
-          image: redis
-          resources:
-            requests:
-              cpu: 100m
-              memory: 100Mi
-          ports:
+      - name: redis-server
+        image: redis
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
           - containerPort: 6379
+        volumeMounts:
+          - name: lv-storage
+            mountPath: /data
+        env:
+          - name: ALLOW_EMPTY_PASSWORD
+            value: "yes"
+      volumes:
+        - name: lv-storage
+          persistentVolumeClaim:
+            claimName: redis-pvc
 ---
 apiVersion: v1
 kind: Service
